@@ -56,7 +56,7 @@ public class User {
         this.totalScore = environmentScore + mentalHealthScore + relationScore;
     }
     
-    // Analisis & Hasil
+    // Analisis \hasil
     public String getAwarenessLevel() {
         if (totalScore >= 56) {
             return "Skor kamu sangat tinggi !!!!";
@@ -71,13 +71,13 @@ public class User {
     
     public String getAwarenessDescription() {
         if (totalScore >= 56) {
-            return "Luar biasa! Kamu sangat sadar akan pentingnya lingkungan sehat untuk kesehatan mental.";
+            return "Keren banget! Kamu memiliki tingkat kesadaran yang tinggi akan pentingnya lingkungan dan kesehatan mental";
         } else if (totalScore >= 41) {
-            return "Bagus! Kamu sudah cukup menyadari hubungan lingkungan dan kesehatan mental.";
+            return "Bagus! Kamu udah cukup paham tentang kesadaran pada hubungan lingkungan dan kesehatan mental.";
         } else if (totalScore >= 26) {
-            return "Tidak buruk! Masih ada ruang untuk berkembang dalam kesadaran lingkungan dan mental.";
+            return "Nggak buruk! Kamu masih bisa berkembang dalam kesadaran lingkungan dan mental.";
         } else {
-            return "Ayo semangat! Mari tingkatkan kesadaran akan lingkungan dan kesehatan mental.";
+            return "Ayo semangat! Kamu masih bisa meningkatkan kesadaran akan lingkungan dan kesehatan mental.";
         }
     }
     
@@ -149,19 +149,6 @@ public class User {
         } else {
             return "Keterkaitan Lingkungan & Mental";
         }
-    }
-    
-    public String getEmoji() {
-        if (totalScore >= 56) {
-          return "🌟";
-        }
-        if (totalScore >= 41) {
-          return "😊";
-        }
-        if (totalScore >= 26) {
-          return "🙂";
-        }
-        return "💪";
     }
     
     @Override
