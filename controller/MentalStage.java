@@ -61,7 +61,7 @@ public class MentalStage {
     }
     
     public MentalStage(Stage stage, User user) {
-        this(stage, user, "assets/");
+        this(stage, user, "src/assets/");
     }
 
     private void createScene() {
