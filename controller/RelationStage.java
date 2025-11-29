@@ -55,7 +55,7 @@ public class RelationStage {
     }
 
     public RelationStage(Stage stage, User user) {
-        this(stage, user, "assets/");
+        this(stage, user, "src/assets/");
     }
 
     private void createScene() {
