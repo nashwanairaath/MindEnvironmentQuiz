@@ -56,28 +56,36 @@ public class User {
         this.totalScore = environmentScore + mentalHealthScore + relationScore;
     }
     
-    // Analisis \hasil
+    // Analisis & Hasil
     public String getAwarenessLevel() {
-        if (totalScore >= 56) {
-            return "Skor kamu sangat tinggi !!!!";
-        } else if (totalScore >= 41) {
-            return "Skor kamu tinggi !!";
-        } else if (totalScore >= 26) {
-            return "Skor kamu sedang";
+        if (totalScore >= 43) { 
+            return "🌲 The Nature Seeker";
+        } else if (totalScore >= 22) {
+            return "🌆 The Urban Balancer";
         } else {
-            return "Skor kamu rendah :(";
+            return "🏠 The Comfort Zoner";
         }
     }
-    
+
+    public String getArchetypeDescription() {
+        if (totalScore >= 43) {
+            return "Kehadiran alam memberikanmu rasa tenang dan damai. Ada kenyamanan dan kehangatan ketika kamu berada di alam & ruang terbuka. Rasanya tubuh dan pikiran jadi lebih fresh !!";
+        } else if (totalScore >= 22) {
+            return "Kamu cukup nyaman di tengah padatnya aktivitas harian mu, tetapi kamu tetap membutuhkan sedikit healing dari alam yang membantumu menjadi lebih tenang dan relax...";
+        } else {
+            return "Tempat yang tenang dan sudah lama kamu kenal membuatmu merasa nyaman. Namun sesekali, cobalah untuk keluar sebentar untuk menlihat indahnya alam yang bisa menyegarkan pikiranmu.";
+        }
+    }    
+   //quotes
     public String getAwarenessDescription() {
         if (totalScore >= 56) {
-            return "Keren banget! Kamu memiliki tingkat kesadaran yang tinggi akan pentingnya lingkungan dan kesehatan mental";
+            return "\"Alam bukan tempat untuk dikunjungi. Alam adalah rumah.\"\n  – Gary Snyder";
         } else if (totalScore >= 41) {
-            return "Bagus! Kamu udah cukup paham tentang kesadaran pada hubungan lingkungan dan kesehatan mental.";
+            return "\"Lihatlah jauh ke dalam alam, dan kamu akan mengerti segalanya dengan lebih baik.\"\n  – Albert Einstein";
         } else if (totalScore >= 26) {
-            return "Nggak buruk! Kamu masih bisa berkembang dalam kesadaran lingkungan dan mental.";
+            return "\"Ancaman terbesar bagi planet kita adalah keyakinan bahwa orang lain yang akan menyelamatkannya.\"\n  – Robert Swan";
         } else {
-            return "Ayo semangat! Kamu masih bisa meningkatkan kesadaran akan lingkungan dan kesehatan mental.";
+            return "\"Perjalanan ribuan mil dimulai dengan satu langkah kecil. Jangan menyerah!\"\n  – Lao Tzu";
         }
     }
     
