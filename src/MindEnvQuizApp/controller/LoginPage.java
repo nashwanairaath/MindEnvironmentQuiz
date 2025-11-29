@@ -44,11 +44,11 @@ public class LoginPage {
         headerBox.setAlignment(Pos.CENTER);
 
         Label titleLabel = new Label("Mind & Environment");
-        titleLabel.setFont(Font.font("Arial", FontWeight.BOLD, 50));
+        titleLabel.setFont(Font.font("Segoe UI", FontWeight.BOLD, 50));
         titleLabel.setTextFill(Color.WHITE);
 
         Label subtitleLabel = new Label("Quiz Kesadaran Lingkungan & Mental");
-        subtitleLabel.setFont(Font.font("Arial", FontWeight.SEMI_BOLD, 18));
+        subtitleLabel.setFont(Font.font("Segoe UI", FontWeight.SEMI_BOLD, 18));
         subtitleLabel.setTextFill(Color.web("#ecf0f1"));
 
         headerBox.getChildren().addAll(titleLabel, subtitleLabel);
@@ -60,7 +60,7 @@ public class LoginPage {
                 "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 30, 0, 0, 8);");
 
         Label nameLabel = new Label("👤 Nama Kamu:");
-        nameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        nameLabel.setFont(Font.font("Segoe UI", FontWeight.BOLD, 16));
         nameLabel.setTextFill(Color.web("#2c3e50"));
 
         nameField = new TextField();
@@ -71,7 +71,7 @@ public class LoginPage {
                 "-fx-background-radius: 10;");
 
         errorLabel = new Label();
-        errorLabel.setFont(Font.font("Arial", 14));
+        errorLabel.setFont(Font.font("Segoe UI", 14));
         errorLabel.setTextFill(Color.web("#e74c3c"));
         errorLabel.setWrapText(true);
 
@@ -85,7 +85,7 @@ public class LoginPage {
         infoBox.setMaxHeight(Region.USE_PREF_SIZE);
 
         Label infoTitle = new Label("Informasi Kuis:");
-        infoTitle.setFont(Font.font("Arial", FontWeight.BOLD, 14));
+        infoTitle.setFont(Font.font("Segoe UI", FontWeight.BOLD, 14));
         infoTitle.setTextFill(Color.web("#2c3e50"));
 
         Label infoText = new Label(
@@ -96,7 +96,7 @@ public class LoginPage {
                         "  - Hubungan Keduanya\n" +
                         "• Total Skor Maksimal: 64 poin"
         );
-        infoText.setFont(Font.font("Arial", 13));
+        infoText.setFont(Font.font("Segoe UI", 13));
         infoText.setTextFill(Color.web("#34495e"));
         infoText.setWrapText(true);
         
@@ -119,14 +119,14 @@ public class LoginPage {
         Button startButton = new Button("🚀 Mulai Quiz");
         startButton.setPrefWidth(250);
         startButton.setPrefHeight(60);
-        startButton.setFont(Font.font("Arial", FontWeight.BOLD, 17));
+        startButton.setFont(Font.font("Segoe UI", FontWeight.BOLD, 17));
         startButton.setStyle("-fx-background-color: #667eea; -fx-text-fill: white; " +
                 "-fx-background-radius: 25; -fx-cursor: hand;");
 
-        Button backButton = new Button("⬅️ Kembali");
+        Button backButton = new Button(" Kembali");
         backButton.setPrefWidth(120);
         backButton.setPrefHeight(60);
-        backButton.setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        backButton.setFont(Font.font("Segoe UI", FontWeight.BOLD, 16));
         backButton.setStyle("-fx-background-color: #95a5a6; -fx-text-fill: white; " +
                 "-fx-background-radius: 25; -fx-cursor: hand;");
 
