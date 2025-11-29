@@ -31,12 +31,12 @@ public class EnvironmentStage {
         this.quizLogic = new QuizLogic();
         
         String filePath = basePath + "environtment.txt";
-        System.out.println("\n📂 Loading Environment Questions from: " + filePath);
+        System.out.println("\nLoading Environment Questions from: " + filePath);
         
         quizLogic.loadFromFile(filePath);
         this.questions = quizLogic.getQuestions();
         
-        System.out.println("📊 Total questions loaded: " + (questions != null ? questions.size() : 0));
+        System.out.println("Total questions loaded: " + (questions != null ? questions.size() : 0));
         
         // Initialize answer storage
         if (questions != null) {
@@ -46,7 +46,7 @@ public class EnvironmentStage {
         if (questions != null && !questions.isEmpty()) {
             createScene();
         } else {
-            showErrorScene("❌ Tidak ada soal Environment yang dimuat!");
+            showErrorScene("Tidak ada soal Environment yang dimuat!");
         }
     }
     
@@ -56,7 +56,7 @@ public class EnvironmentStage {
     
     private void createScene() {
         if (currentQuestionIndex < 0 || currentQuestionIndex >= questions.size()) {
-            System.out.println("❌ Invalid question index: " + currentQuestionIndex);
+            System.out.println("Invalid question index: " + currentQuestionIndex);
             return;
         }
 
@@ -70,7 +70,7 @@ public class EnvironmentStage {
         headerBox.setStyle("-fx-background-color: rgba(255,255,255,0.95); -fx-background-radius: 15;");
         headerBox.setPadding(new Insets(20));
 
-        Label stageTitle = new Label("🌱 Tahap 1: Kesadaran Lingkungan");
+        Label stageTitle = new Label("Tahap 1: Kesadaran Lingkungan");
         stageTitle.setFont(Font.font("Segoe UI", FontWeight.BOLD, 22));
         stageTitle.setTextFill(Color.web("#667eea"));
 
@@ -154,7 +154,7 @@ public class EnvironmentStage {
 
             // On click - hanya pilih jawaban, JANGAN langsung pindah soal
             btn.setOnAction(e -> {
-                System.out.println("\n📝 Button " + answerLabel + " clicked on question " + (currentQuestionIndex + 1));
+                System.out.println("\nButton " + answerLabel + " clicked on question " + (currentQuestionIndex + 1));
                 
                 // Unselect previous button
                 if (selectedButton[0] != null) {
@@ -181,21 +181,21 @@ public class EnvironmentStage {
         navBox.setAlignment(Pos.CENTER);
         navBox.setPadding(new Insets(20));
 
-        Button prevBtn = new Button("⬅️ Sebelumnya");
+        Button prevBtn = new Button(" Sebelumnya");
         prevBtn.setPrefWidth(180);
         prevBtn.setPrefHeight(55);
         prevBtn.setFont(Font.font("Segoe UI", FontWeight.BOLD, 14));
         prevBtn.setStyle("-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 20;");
         prevBtn.setDisable(currentQuestionIndex == 0);
 
-        Button nextBtn = new Button("Selanjutnya ➜");
+        Button nextBtn = new Button("Selanjutnya");
         nextBtn.setPrefWidth(180);
         nextBtn.setPrefHeight(55);
         nextBtn.setFont(Font.font("Segoe UI", FontWeight.BOLD, 14));
         nextBtn.setStyle("-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 20;");
         nextBtn.setVisible(currentQuestionIndex < questions.size() - 1);
 
-        Button submitBtn = new Button("✅ Kirim Jawaban");
+        Button submitBtn = new Button("Kirim Jawaban");
         submitBtn.setPrefWidth(180);
         submitBtn.setPrefHeight(55);
         submitBtn.setFont(Font.font("Segoe UI", FontWeight.BOLD, 14));
@@ -224,7 +224,7 @@ public class EnvironmentStage {
         });
 
         submitBtn.setOnAction(e -> {
-            System.out.println("\n🎯 Submit button clicked on last question");
+            System.out.println("\nSubmit button clicked on last question");
             if (selectedAnswer[0] != null) {
                 scoreAnswer(selectedAnswer[0]);
                 submitQuiz();
@@ -253,10 +253,10 @@ public class EnvironmentStage {
     
 // Metode untuk menilai jawaban dan memperbarui skor
     private void scoreAnswer(String answer) {
-        System.out.println("🧮 Calculating score for answer: " + answer);
+        System.out.println(" Calculating score for answer: " + answer);
         
         if (currentQuestionIndex < 0 || currentQuestionIndex >= questions.size()) {
-            System.out.println("❌ Invalid question index: " + currentQuestionIndex);
+            System.out.println(" Invalid question index: " + currentQuestionIndex);
             return;
         }
         
@@ -269,18 +269,18 @@ public class EnvironmentStage {
         // Jika jawaban benar, tambah skor
         if (answer.equals(correctAnswer)) {
             user.setEnvironmentScore(user.getEnvironmentScore() + 4);
-            System.out.println("   ✅ CORRECT! +4 points");
+            System.out.println(" CORRECT! +4 points");
         } else {
-            System.out.println("   ❌ WRONG!");
+            System.out.println(" WRONG!");
         }
         
-        System.out.println("   📊 Current Environment Score: " + user.getEnvironmentScore() + " / 20");
+        System.out.println(" Current Environment Score: " + user.getEnvironmentScore() + " / 20");
     }
 
     private void submitQuiz() {
         System.out.println("\n========================================");
-        System.out.println("✅ Quiz Environment SELESAI!");
-        System.out.println("📊 Skor Environment Final: " + user.getEnvironmentScore() + " / 20");
+        System.out.println(" Quiz Environment SELESAI!");
+        System.out.println(" Skor Environment Final: " + user.getEnvironmentScore() + " / 20");
         System.out.println("========================================\n");
         
         // Validasi path
@@ -289,13 +289,13 @@ public class EnvironmentStage {
             mentalPath += "/";
         }
         
-        System.out.println("📂 Moving to Mental Stage with path: " + mentalPath);
+        System.out.println(" Moving to Mental Stage with path: " + mentalPath);
         
         try {
             MentalStage mentalStage = new MentalStage(stage, user, mentalPath);
             mentalStage.show();
         } catch (Exception e) {
-            System.out.println("❌ Error transitioning to Mental Stage: " + e.getMessage());
+            System.out.println(" Error transitioning to Mental Stage: " + e.getMessage());
             e.printStackTrace();
         }
     }
