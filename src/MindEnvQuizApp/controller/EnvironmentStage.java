@@ -30,7 +30,7 @@ public class EnvironmentStage {
         this.basePath = basePath;
         this.quizLogic = new QuizLogic();
         
-        String filePath = basePath + "environtment.txt";
+        String filePath = basePath + "environment.txt";
         System.out.println("\nLoading Environment Questions from: " + filePath);
         
         quizLogic.loadFromFile(filePath);
@@ -339,3 +339,4 @@ public class EnvironmentStage {
         stage.show();
     }
 }
+
