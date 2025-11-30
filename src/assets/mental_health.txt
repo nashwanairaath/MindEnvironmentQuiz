@@ -1,0 +1,34 @@
+Q: Saat kamu merasa stres, apa yang biasanya kamu lakukan?
+A: Menenangkan diri di tempat tenang atau dekat alam
+B: Mendengarkan musik atau menonton sesuatu
+C: Mengabaikannya dan lanjut aktivitas
+D: Marah atau melampiaskan ke orang lain
+ANSWER: A
+
+Q: Seberapa sering kamu menyadari perubahan suasana hatimu?
+A: Sering, aku peka dengan kondisiku
+B: Kadang-kadang
+C: Jarang memperhatikan
+D: Tidak pernah sadar
+ANSWER: A
+
+Q: Bagaimana kamu menilai keseimbangan antara waktu istirahat dan aktivitasmu?
+A: Seimbang, aku tahu kapan harus berhenti
+B: Kadang berlebihan tapi masih terkontrol
+C: Sering kelelahan tanpa sadar
+D: Tidak punya waktu buat istirahat
+ANSWER: A
+
+Q: Menurutmu, seberapa penting menjaga kesehatan mental?
+A: Sangat penting, sama pentingnya dengan fisik
+B: Penting, tapi sering terabaikan
+C: Lumayan penting
+D: Tidak begitu penting
+ANSWER: A
+
+Q: Ketika ada masalah pribadi, apa cara kamu menghadapinya?
+A: Bicara dengan orang dekat atau refleksi diri
+B: Menyibukkan diri biar lupa
+C: Menghindar dari masalah
+D: Menyalahkan keadaan
+ANSWER: A
